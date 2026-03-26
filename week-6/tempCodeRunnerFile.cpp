@@ -1,7 +1,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-bool dfs(int node,int dest,vector<bool>&visited,vector<vector<int>>&adj){
+bool dfs(int node,int dest,vector<int>visited,vector<vector<int>>adj){
     if(node==dest){
         return true;
     }
@@ -27,7 +27,7 @@ int main(){
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
-    vector<bool>visited(V,false);
+    vector<int>visited(V,false);
     int src,dest;
     cin>>src>>dest;
     if(dfs(src,dest,visited,adj)){
